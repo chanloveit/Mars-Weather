@@ -1,0 +1,125 @@
+body{
+	font-family: "Bebas Neue", sans-serif;
+  	font-weight: 400;
+	font-style: normal;
+	color: white;
+}
+
+h1{
+	font-size: 70px;
+	color: white;
+	z-index: 10;
+	margin-bottom: 10px;
+}
+
+h3{
+	font-size: 30px;
+	color: white;
+	z-index: 10;
+	margin-top: 0px;
+	font-weight: lighter;
+}
+
+.link{
+	color: white;
+}
+
+.background{
+	position: fixed;
+  	top: 0;
+ 	left: 0;
+  	width: 100%;
+	height: 100%;
+  	background-size: cover;
+  	background-position: center;
+  	filter: brightness(40%);
+  	z-index: -1;
+}
+
+
+.today, .today h2{
+	color: white;
+	font-size: 50px;
+	font-weight: lighter;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	transform: translateX(50px);
+}
+
+.card-container{
+	display: grid;
+  	grid-template-columns: repeat(7, 1fr);
+  	gap: 1rem;
+  	margin: 2rem auto;
+  	max-width: 1200px; 
+	z-index: 1;
+	margin: 0 auto;
+}
+
+.card {
+  	background: rgba(255,255,255,0.1);
+  	outline : solid 1px white;
+  	padding: 1rem;
+ 	text-align: center;
+  	color: white;
+	z-index: 2;
+}
+
+.sol-row, .date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px; 
+  margin: 0 auto; 
+}
+
+.sol-text, .date {
+  font-weight: bold;
+  color: white;
+}
+
+.high {
+  font-size: 30px; 
+  color: white;
+}
+
+.low {
+  font-size: 30px;
+  color: white;
+}
+
+.card:hover { 
+	transform: scale(1.05); 
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+
+.todayDiv, .todayDiv h2{
+	color: white;
+	font-size: 45px;
+	font-weight: lighter;
+	margin-top: 45px;
+	transform: translateX(50px);
+	text-align: center;
+}
+
+.detail-info h2{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 0px;
+}
+
+.detail-info p{
+	color: white;
+	font-size: 20px;
+	font-weight: lighter;
+	text-align: left;
+	margin: 0px;
+}
+
+#divisor{
+	font-size: 30px;
+	margin: 0px;
+}
