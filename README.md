@@ -2,5 +2,5 @@
 <p>만들던 도중 알았는데, API를 제공하는 Insight 호가 임무수행을 마쳤다는군요..?</p>
 <p>실시간으로 지구와 1:1 정보를 제공하면 너무 좋겠지만 언젠가 다른 탐사선이 자료를 제공할 때까지 기다립시다..</p>
 <p></p>
-<p>https://chanloveit.github.io/static-marsweather/  <--프리뷰 페이지입니다. static한 페이지라 폰트 적용 안되고 정렬에 문제가 있네요 Flask도 빠져 있어서 머신러닝 모듈도 적용 안되어 있어요.</p>
+<p>https://mars-weather-7myy.onrender.com<--프리뷰 페이지입니다. render로 배포 중이고, 접속에 시간이 좀 걸릴 수 있습니다.</p>
 <h3>직접 실행하시려면 flask에서 ip주소랑 포트 수정해주세요.</h3> 
