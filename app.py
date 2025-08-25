@@ -10,7 +10,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-API_KEY = os.getenv('NASA_API_KEY')
+API_KEY = os.environ.get("NASA_API_KEY")
 
 
 def get_mars_data():
@@ -39,5 +39,6 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=9000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
 
