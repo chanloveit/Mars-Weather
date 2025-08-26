@@ -123,3 +123,25 @@ h3{
 	font-size: 30px;
 	margin: 0px;
 }
+
+
+.etc {
+  	display: flex;
+  	align-items: flex-start; 
+  	gap: 20px;               
+}
+
+
+.detail-info {
+  	flex: 0.7;  
+}
+
+
+#weatherChart {
+	width: 400px !important;  
+ 	height: 250px !important; 
+  	padding: 10px;
+	background: rgba(255,255,255,0.1);
+  	outline : solid 1px white;
+}
+

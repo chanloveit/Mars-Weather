@@ -79,10 +79,10 @@ async function getPredictedTemp(){
         const data = await res.json();
         const todayDiv = document.getElementsByClassName("todayDiv")[0];
         
-        todayDiv.innerHTML = `
+        todayDiv.appendChild = (`
             <h2 class = "pred-row">
                 Predicted Sol ${data.sol} Temp: ${data.pred_temp.toFixed(2)}˚F
-            </h2>`;
+            </h2>`);
     } catch(err){
         console.error("Prediction API error", err);
     }
@@ -111,3 +111,45 @@ function cardClickEvent(){
 getPredictedTemp();
 setRandomBackground();
 getMarsWeather();
+
+fetch(`https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedtype=json&ver=1.0`)
+	.then(res => res.json())
+  	.then(data => {
+    	const sols = Object.keys(data).slice(0, -2);
+		const ctx = document.getElementById('weatherChart').getContext('2d');
+    	new Chart(ctx, {
+      		type: 'line',
+      		data: {
+        		labels: sols,
+        		datasets: [{
+          			label: 'Temperature',
+          			data: sols.map(sol => data[sol]?.AT?.av ?? null),
+          			borderColor: 'rgba(255, 255, 255, 0.9)',
+					backgroundColor: 'rgba(255, 255, 255, 0.4)',	
+          			borderWidth: 2
+        		}]
+      		},
+      		options: {
+        		responsive: true,
+				plugins: {
+					legend: {
+					display: false
+					}	
+				}
+				,
+        		scales: {
+					x: {
+						ticks: {
+							color: 'white'
+						}
+					},
+					y: { 
+						ticks: {
+							color: 'white'
+						},
+						beginAtZero: false 
+					}
+				}
+      	}
+    });
+});
