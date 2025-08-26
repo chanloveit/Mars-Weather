@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 	<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<title>Mars Weather</title>
 </head>
 <body>
@@ -41,7 +42,11 @@
 <p id = "divisor">
 ────────────────────
 </p>
-<div class = "detail-info">
+<div class = "etc">
+	<div class = "detail-info">
+	</div>
+	<canvas id = "weatherChart">
+	</canvas>
 </div>
 </body>
 </html>
